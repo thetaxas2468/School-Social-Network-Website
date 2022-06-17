@@ -23,23 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 
-/server/node_modules
-
-./server/.env.local
-./server/.env.development.local
-./server/.env.test.local
-./server/.env.production.local
-/server/.env.local
-/server/.env.development.local
-/server/.env.test.local
-/server/.env.production.local
-
-server\.env
-server\node_modules
-server/.env
 server/node_modules
-
-./server\.env
-./server\node_modules
-./server/.env
-./sserver/node_modules
+server/.env
