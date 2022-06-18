@@ -1,4 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 interface User{
     email:string,
@@ -10,6 +13,8 @@ type submitEvent=React.FormEvent<HTMLFormElement>;
 export default function Signin  () {
     // const [email,setEmail]=useState<string>("");
     // const [password,setPassword]=useState<string>("");
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
     const [user,setUser] =useState<User >({email:"",password:""});
 
     const handleEmail=(e:inputEvent):void=>{
@@ -24,7 +29,16 @@ export default function Signin  () {
     }
     const handleSubmit=(e:submitEvent):void=>{
         e.preventDefault();
-        console.log(user)
+        axios.post("http://localhost:3002/account/signin",user,{withCredentials:true}).then((result)=>{
+            if(result.data.status==="error"){
+                alert("Enter correct data")
+            }
+            else{
+                dispatch({type:"AUTH_ON"});
+                navigate("/");
+                window.location.reload();
+            }
+        }).catch(err=>alert("error has been occured"))
 
     }
 

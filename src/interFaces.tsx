@@ -20,7 +20,7 @@ export interface projectInterface{
 
 
 export interface Try{
-    auth:{},
+    auth:{auth:boolean},
     project:{projects:projectInterface[],projectById:projectInterface}
 
 }
