@@ -20,3 +20,28 @@ code {
   border-radius: 20px;
 
 }
+.mGreen{
+  color: rgba(0, 255, 0, 0.5);
+  width: 100%;
+  border: 2px solid red;
+  background-color: violet;
+}
+.mainImage{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.h1-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+

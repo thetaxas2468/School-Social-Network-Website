@@ -44,6 +44,12 @@ export default function Dashboard  () {
             }
             </div>
             }
+            {!auth&&
+                <div className="main-cont">
+                    <h1 className="mGreen h1-cont">Please LOG IN 404 NOT FOUND PROJECTS </h1>
+                    <img className="mainImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Please_log_in_image.png/1280px-Please_log_in_image.png"></img>
+                </div>
+            }
         </div>
     )
 }
