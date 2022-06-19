@@ -6,6 +6,7 @@ import { RootState } from "../..";
 import { projectInterface,Try } from "../../interFaces";
 import getProjects from "../../redux/actions/getProjects";
 import Cookies from 'js-cookie';
+import Chart from "./Chart";
 
 export default function Dashboard  () {
     const dispatch=useDispatch();
@@ -22,25 +23,31 @@ export default function Dashboard  () {
                 setAuth(false);
                 alert("Please log in")
             }
-        },1000)
+        },200)
     },[])
+
     return(
         <div>
             {
             auth&&
             <div>
-            {prjs.length!==0?
-            <div className="dashboard container">
-                <div className="row">
-                    <div className="col s12 m6">
-                        { <ProjectList projects={prjs}/>}
-                    </div>
-                    <div className="col s12 m5 offset-m1">
-                        <Notifications/>
-                    </div>
+                {
+                <div>
+                    <div className="dashboard container">
+                        <div>
+                        <h3>Posts by students and teachers:</h3>
+                        <div className="row">
+                            <div className="col s12 m6">
+                                { <ProjectList projects={prjs}/>}
+                            </div></div>
+                            <div className="col s12 m5 offset-m1">
+                                <Notifications authenticated={auth}/>
+                            </div>
 
+                        </div>
+                    <Chart projectsData={prjs}></Chart>
+                    </div>
                 </div>
-            </div>:<div>Loading</div>
             }
             </div>
             }

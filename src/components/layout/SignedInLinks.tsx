@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import React, { MouseEventHandler } from "react";
 import { useDispatch } from "react-redux";
-import { NavLink ,useNavigate} from "react-router-dom";
+import { Link, NavLink ,useNavigate} from "react-router-dom";
 
 export default function SignedInLinks  () {
     const navigate=useNavigate();
@@ -16,7 +16,19 @@ export default function SignedInLinks  () {
     return(
         <ul className="right">
             <li>
-                <NavLink to="/create">New Project</NavLink>
+                <Link to="/add-video">Add Video</Link>
+            </li>
+            <li>
+                <Link to="/videos">Videos</Link>
+            </li>
+            <li>
+                <Link to="/game">Play</Link>
+            </li>
+            <li>
+                <NavLink to="/create">New Post</NavLink>
+            </li>
+            <li>
+                <NavLink to="/notification_create">Create Class Notification</NavLink>
             </li>
             <li>
                 <button onClick={btnClicked}>Log Out</button>

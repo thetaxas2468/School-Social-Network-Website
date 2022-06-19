@@ -1,11 +1,13 @@
 const express = require("express");
 var cors = require("cors");
 const mongoose=require("mongoose")
-const bodyParser = require('body-parser')
 require('dotenv').config();
 const projects=require("./Routes/Projects")
 const accounts=require("./Routes/Users/index");
+const videos=require("./Routes/Video/index");
+const notifications=require("./Routes/Notification/index");
 const cookieParser = require("cookie-parser");
+
 
 const app=express();
 app.use(cors({
@@ -13,8 +15,6 @@ app.use(cors({
   methods:["GET","POST"],
   credentials:true
 }));
-// app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(bodyParser.json())
 app.use(express.json());
 app.use(cookieParser());
 
@@ -25,6 +25,8 @@ app.use(cookieParser());
 
 app.use("/projects",projects)
 app.use("/account",accounts)
+app.use("/notifications",notifications)
+app.use("/video",videos);
 
 
 

@@ -24,3 +24,18 @@ export interface Try{
     project:{projects:projectInterface[],projectById:projectInterface}
 
 }
+
+
+export interface Notification{
+    name:string,
+    start:string,
+    end:string,
+    _id?:string
+}
+export type videoD={
+    name:string,
+    details:string,
+    link:string,
+    subject:string,
+    _id?:string
+}

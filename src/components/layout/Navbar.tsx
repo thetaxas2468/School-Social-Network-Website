@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Try } from "../../interFaces";
 import SignedInLinks from "./SignedInLinks";
 import SignedOutLinks from "./SignedOutLinks";
-
+import Game from "../Game/Game";
 
 export default function Navbar  () {
     const [auth,setAuth]=useState<boolean>(false);

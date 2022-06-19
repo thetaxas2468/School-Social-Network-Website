@@ -7,7 +7,12 @@ const router=require("express").Router();
 
 
 
-
+router.post("/delete",(req,res)=>{
+    const {id}=req.body;
+    Project.deleteOne(id).then((result)=>{
+        res.send(true)
+    }).catch(err=>res.send(false))
+})
 
 router.post("/create-project",(req,res)=>{
     const {authorFirstName,authorLastName,title,content} =req.body;

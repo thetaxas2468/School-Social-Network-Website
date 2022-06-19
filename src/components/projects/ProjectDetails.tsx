@@ -1,6 +1,8 @@
+import axios from "axios";
+import Cookies from "js-cookie";
 import React, { useEffect ,useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {  useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import { setTimeout } from "timers/promises";
 import { RootState } from "../..";
 import { Try ,projectInterface} from "../../interFaces";
@@ -15,15 +17,26 @@ export default function ProjectDetails  () {
     const {id} = useParams<Props>();
     const dispatch=useDispatch();
     const project =useSelector<Try,projectInterface>((state):projectInterface=>state.project.projectById);
+    const navigate=useNavigate();
+    const password:string="admin";
      useEffect(()=>{
 
         window.setTimeout(()=>{
             getProjectById(dispatch,id!);
         },500)
-    
+        
         
     },[]);
-    console.log(project)
+    useEffect(()=>{
+        if(!Cookies.get("jwt")){
+            window.location.href="/";
+        }
+    },[])
+    const handleClick=(e:React.MouseEvent)=>{
+        axios.post("http://localhost:3002/projects/delete",id).then((result)=>{
+            navigate("/");
+        })
+    }
     return(
         <div>{project._id?
             <div className="container section project-details">
@@ -38,6 +51,7 @@ export default function ProjectDetails  () {
                         <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
                     </div>
                 </div>
+                <button onClick={handleClick}>Delete post</button>
             </div>:<div>Loading</div>
 }
         </div>

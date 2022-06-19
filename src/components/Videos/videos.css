@@ -1,0 +1,12 @@
+.vidoes{
+    margin: 50px;
+}
+.video{
+    color: blue;
+    border: 2px dashed black;
+    text-align: center;
+    margin: 20px 0;
+}
+.button{
+    background-color: red;
+}

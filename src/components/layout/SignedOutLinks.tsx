@@ -1,11 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function SignedOutLinks  () {
 
 
     return(
         <ul className="right">
+            <li>
+                <Link to="/game">Play</Link>
+            </li>
             <li>
                 <NavLink to="/signup">Sign Up</NavLink>
             </li>

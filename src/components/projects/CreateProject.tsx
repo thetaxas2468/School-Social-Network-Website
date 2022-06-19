@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import Cookies from "js-cookie";
+import  { useEffect, useState } from "react";
 import {useSelector,useDispatch} from "react-redux";
 import { RootState } from "../..";
 import { Project, projectInterface } from "../../interFaces";
@@ -12,6 +13,11 @@ type submitEvent=React.FormEvent<HTMLFormElement>;
 export default function CreateProject  () {
     const [project,setProject] =useState<Project>({authorFirstName:"",authorLastName:"",title:"",content:""});
     const dispatch=useDispatch();
+    useEffect(()=>{
+        if(!Cookies.get("jwt")){
+            window.location.href="/";
+        }
+    },[])
     const handleTitle=(e:inputEvent):void=>{
         setProject(
             {...project,title:e.target.value}
