@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+# React-TypeScript-Redux-NodeJS-Express-Axios-Mongoose-JWT-Crypto ...
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Basically this project is about students logging in the system (can be teacher) and setting up some important things for studying and these stuffs
+### Adding a new video on the list and have the ability to remove it ,Creating notifications for classes,Creating posts or reminders shared with others
+### and even playing a small shuffle game online and deleting the posts by their id and like that(teacher adding a class in the classes no one can delete it only him in ###the data base)
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Shuffle Game
+![Game](https://user-images.githubusercontent.com/81024607/174502445-1973bb5c-bcb4-41a4-8ef1-fa1a478c6d43.png)
+# Logged In Page With Notifications And Posts And Bars
+![LoggedIn](https://user-images.githubusercontent.com/81024607/174502446-19d8138f-330a-40fa-b98f-b338209ab7cf.png)
+# Home Page 
+![SignOutPage](https://user-images.githubusercontent.com/81024607/174502447-f2fa9147-2596-4332-9cf3-92c49eab9b67.png)
+# Videos Page With Bars
+![Videos](https://user-images.githubusercontent.com/81024607/174502448-aac3cdf1-a30a-425a-8dd4-8302798c6a0a.png)
+# Components Diagram
+![Diagram](https://user-images.githubusercontent.com/81024607/174502449-b7d31b63-dfc2-4937-98a0-e78b676bdc10.png)
