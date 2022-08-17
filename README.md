@@ -1,10 +1,6 @@
-# React-TypeScript-Redux-NodeJS-Express-Axios-Mongoose-JWT-Crypto ...
-
-
-### Basically this project is about students logging in the system (can be teacher) and setting up some important things for studying and these stuffs
-### Adding a new video on the list and have the ability to remove it ,Creating notifications for classes,Creating posts or reminders shared with others
-### and even playing a small shuffle game online and deleting the posts by their id and like that(teacher adding a class in the classes no one can delete it only him in ###the data base)
-
+4-	Posts and Notification website(Authentication included): The site has the shuffle game in it as a non User(Teacher or Student) and when logging in each user has the ability to post a video in the blog to watch later or to make others watch it also as notifications for the class or reminders and also a graph that shows how the things are.
+Frontend: React ,redux,materialize,axios etc.
+Backend: NodeJS,Express,mongoose,jwt… .
 
 # Shuffle Game
 ![Game](https://user-images.githubusercontent.com/81024607/174502445-1973bb5c-bcb4-41a4-8ef1-fa1a478c6d43.png)
